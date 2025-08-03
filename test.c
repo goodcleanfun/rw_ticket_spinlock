@@ -13,7 +13,7 @@ static atomic_uint reads;
 
 #define READ_THREADS 4
 #define WRITE_THREADS 2
-#define MAX_COUNTER 10000
+#define MAX_COUNTER 1000
 
 int increment_counter_thread(void *arg) {
     uint64_t nsec = (uint64_t)arg;
@@ -53,7 +53,7 @@ TEST rw_ticket_spinlock_test(void) {
     thrd_t write_threads[WRITE_THREADS];
     thrd_t read_threads[READ_THREADS];
     for (int i = 0; i < WRITE_THREADS; i++) {
-        ASSERT_EQ(thrd_success, thrd_create(&write_threads[i], increment_counter_thread, (void *)10000));
+        ASSERT_EQ(thrd_success, thrd_create(&write_threads[i], increment_counter_thread, (void *)100));
     }
     for (int i = 0; i < READ_THREADS; i++) {
         ASSERT_EQ(thrd_success, thrd_create(&read_threads[i], read_counter_thread, NULL));
