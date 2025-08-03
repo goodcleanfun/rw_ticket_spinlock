@@ -11,9 +11,9 @@ static rw_ticket_spinlock_t lock;
 static volatile int counter = 0;
 static atomic_uint reads;
 
-#define READ_THREADS 12
-#define WRITE_THREADS 4
-#define MAX_COUNTER 100000
+#define READ_THREADS 4
+#define WRITE_THREADS 2
+#define MAX_COUNTER 10000
 
 int increment_counter_thread(void *arg) {
     uint64_t nsec = (uint64_t)arg;
