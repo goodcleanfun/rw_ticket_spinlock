@@ -1,0 +1,19 @@
+{
+    "name": "rwlock",
+    "version": "0.0.0",
+    "repo": "goodcleanfun/rwlock",
+    "description": "A fair, queued reader-writer spinlock using C11 atomics.",
+    "keywords": ["spinlock", "rwlock", "ticket", "c11", "atomic", "lock", "mutex", "reader-writer"],
+    "license": "MIT",
+    "dependencies": {
+        "goodcleanfun/aligned": "*",
+        "goodcleanfun/cpu_relax": "*",
+        "goodcleanfun/threading": "*"
+    },
+    "development": {
+        "silentbicycle/greatest": "*"
+    },
+    "src": [
+        "src/rw_ticket_spinlock.h"
+    ]    
+  }
