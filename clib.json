@@ -1,7 +1,7 @@
 {
-    "name": "rwlock",
+    "name": "rw_ticket_spinlock",
     "version": "0.1.0",
-    "repo": "goodcleanfun/rwlock",
+    "repo": "goodcleanfun/rw_ticket_spinlock",
     "description": "A fair, queued reader-writer spinlock using C11 atomics.",
     "keywords": ["spinlock", "rwlock", "ticket", "c11", "atomic", "lock", "mutex", "reader-writer"],
     "license": "MIT",
